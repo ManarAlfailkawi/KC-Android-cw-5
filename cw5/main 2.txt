@@ -1,0 +1,29 @@
+package com.example.letsgettoknowyou;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.accessibilityservice.AccessibilityGestureEvent;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
+
+import java.util.jar.Attributes;
+
+public class MainActivity2 extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2);
+        TextView Name = findViewById(Name);
+        TextView Age = findViewById(Age);
+        Button Next = findViewById(Next);
+
+        Bundle know = getIntent().getExtras();
+        String name = know.getString("N1");
+        int age = know.getInt("N2");
+        Name.setText(Name);
+        Age.setText(String.valueOf(Age));
+
+    }
+}
